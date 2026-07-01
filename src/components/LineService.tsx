@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const SETUP_ITEMS = [
   "あいさつメッセージの作成",
   "リッチメニューの作成",
@@ -16,7 +14,7 @@ export default function LineService() {
       <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-12">
         公式LINEの作成・運用代行
       </h2>
-      <div className="grid sm:grid-cols-[1fr_1fr_auto] gap-6 items-start">
+      <div className="grid sm:grid-cols-2 gap-6">
         <div className="bg-cream rounded-2xl p-8">
           <span className="inline-block border border-emerald-700/40 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
             アカウントの初期設定
@@ -42,14 +40,6 @@ export default function LineService() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="relative hidden sm:block w-40 h-72 mx-auto rounded-2xl overflow-hidden shadow-sm">
-          <Image
-            src="/images/line-loopkun-chat.jpg"
-            alt="TUTOLOOPの公式LINE配信イメージ「ループ君」"
-            fill
-            className="object-cover object-top"
-          />
         </div>
       </div>
     </section>

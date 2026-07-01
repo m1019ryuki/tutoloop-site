@@ -1,4 +1,7 @@
-import Image from "next/image";
+const STATS = [
+  { value: "88.9%", label: "Googleでお店の場所を調べる人の割合" },
+  { value: "47.3%", label: "お店・企業のホームページで情報を調べる人の割合" },
+];
 
 const CARDS = [
   {
@@ -25,17 +28,17 @@ export default function ServiceIntro() {
       <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6">
         「阪大近くの飲食店を、もっと元気に！」
       </h2>
-      <p className="text-sm text-stone-600 max-w-2xl mb-4">
+      <p className="text-sm text-stone-600 max-w-2xl mb-10 leading-relaxed">
         お客様の多くは、来店前にインターネットでお店を調べています。ウェブサイトと公式LINEがあるだけで、
         出会えるはずだったお客様との接点が大きく増えます。
       </p>
-      <div className="relative w-full max-w-3xl aspect-[1295/727] mb-14">
-        <Image
-          src="/images/stats-survey.png"
-          alt="インターネットでお店の情報を調べる人の割合を示す調査データ"
-          fill
-          className="object-contain"
-        />
+      <div className="grid sm:grid-cols-2 gap-6 mb-14">
+        {STATS.map((stat) => (
+          <div key={stat.label} className="bg-cream rounded-2xl px-8 py-10 text-center">
+            <p className="font-serif text-5xl font-bold text-foreground">{stat.value}</p>
+            <p className="mt-3 text-sm text-stone-600">{stat.label}</p>
+          </div>
+        ))}
       </div>
       <div className="grid sm:grid-cols-3 gap-4">
         {CARDS.map((card) => (
