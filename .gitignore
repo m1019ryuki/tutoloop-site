@@ -47,3 +47,4 @@ next-env.d.ts
 /archive/
 .playwright-mcp/
 /tutoloop-full.png
+.claude/scheduled_tasks.lock
