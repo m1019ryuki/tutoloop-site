@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdfbf7;
+  --foreground: #2b2621;
+  --cream: #f4efe4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --font-sans: var(--font-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-serif: var(--font-serif), "Hiragino Mincho ProN", serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
